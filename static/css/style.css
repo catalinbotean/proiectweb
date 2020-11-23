@@ -1,0 +1,679 @@
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	line-height:1.5;
+	padding:0;
+	margin:0;
+	background-color: #0b0c10;
+}
+
+header{
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: #45a29e solid 3px;
+}
+
+.meniu{
+	margin:auto;
+	overflow:hidden;
+}
+
+#logo{
+	float:left;
+	color:#45a29e;
+	padding-left:2.5%;
+}
+
+#efect{
+	color:#ffffff;
+}
+
+.optiuni{
+	padding-top:20px;
+	float:right;
+	padding-right:5%;
+	text-decoration: none;
+}
+
+.optiuni ul li{
+	padding-left:5px;
+	padding-right:5px;
+	display:inline;
+	text-transform:uppercase;
+	color: white;
+	border-bottom: white ridge 1.5px;
+	border-top: white ridge 1.5px;
+	border-left: white ridge 1.5px;
+	border-right: white ridge 1.5px;
+
+}
+
+.optiuni a{
+	text-decoration: none;
+	color:#66fcf1;
+}
+
+ul li:hover{
+	color: white;
+	font-weight:bold;
+}
+.meniu,.optiuni{
+	background-color: #0b0c10;
+}
+
+#continutHome{
+	position:absolute;
+	top:88px;
+	width: 100%;
+	min-height:580px;
+	background:url(../img/1.jpeg) no-repeat 60%;
+	opacity:0.75;
+	border-bottom: #45a29e solid 3px;
+}
+
+.descriere{
+	position:absolute;
+	left:70%;
+	top:20%;
+	background-color:#0b0c10;
+	float:right;
+	border-bottom:#45a29e solid 5px;
+	border-top:#45a29e solid 5px;
+	border-left:#45a29e solid 5px;
+	border-right:#45a29e solid 5px;
+	border-radius:25px;
+}
+
+.white{
+	padding:0;
+	margin:0;
+	padding-left:10px;
+	padding-right: 10px;
+	font-size:18px;
+	color:#ffffff;
+}
+
+#blue{
+	color:#45a29e;
+	padding-bottom:0;
+	padding-top: 0;
+	margin:0;
+	padding-left:10px;
+	padding-right: 10px;
+	font-size:18px;
+}
+
+#alerta{
+    position:absolute;
+    top:2%;
+    left:25%;
+    color:red;
+    font-weight:bold;
+}
+
+#inregistrare{
+	position:absolute;
+	width:380px;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	position:absolute;
+	background-color:#0b0c10;
+	border-bottom:#45a29e solid 5px;
+	border-top:#45a29e solid 5px;
+	border-left:#45a29e solid 5px;
+	border-right:#45a29e solid 5px;
+	border-radius:25px;
+}
+
+#loginText{
+	padding-left: 37%;
+	padding-top: 10%;
+	color:#45a29e;
+}
+
+#creareText{
+	padding-left: 24%;
+	padding-top: 10%;
+	color:#45a29e;
+}
+
+.text{
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+.text input[type="text"]{
+	border-radius:25px;
+	padding:7px;
+	width:300px;
+}
+
+.text input[type="password"]{
+	border-radius:25px;
+	padding:7px;
+	width:300px;
+}
+
+.buton{
+	border-radius:25px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color:black;
+	font-weight: bold;
+	outline:0;
+}
+
+#butonEdit{
+	float:right;
+	padding-top: 10px;
+	padding-right: 40px;
+	padding-bottom: 30px;
+}
+
+
+button{
+	border:none;
+	outline:none;
+	background:#45a29e;
+}
+
+#question{
+	font-size: 8px;
+	color:white;
+	padding-left: 30px;
+	padding-top: 45px;
+	padding-bottom: 15px;
+}
+
+#redirectionare a{
+	color:#45a29e ;
+	text-decoration:none
+}
+
+footer{
+	position:absolute;
+	top:92%;
+	left:5%;
+	color:white;
+	float:bottom;
+}
+
+#adaugare{
+	position:absolute;
+	width:700px;
+	height:500px;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	position:absolute;
+	background-color:#0b0c10;
+	border-bottom:#45a29e solid 5px;
+	border-top:#45a29e solid 5px;
+	border-left:#45a29e solid 5px;
+	border-right:#45a29e solid 5px;
+	border-radius:25px;
+}
+
+#adaugaText{
+	padding-left: 35%;
+	padding-top: 10%;
+	color:#45a29e;
+}
+
+#numeCompanie{
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+input[type="text"]{
+    outline:0;
+}
+
+input[type="password"]{
+    outline:0;
+}
+
+#numeCompanie input[type="text"]{
+	position:absolute;
+	top:112px;
+	border-radius:25px;
+	padding:7px;
+	width:270px;
+}
+
+#numeJob{
+	position:absolute;
+	top:85px;
+	left:320px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+#numeJob input[type="text"]{
+	position:absolute;
+	top:26px;
+	border-radius:25px;
+	padding:7px;
+	width:270px;
+}
+#textCompanie{
+	position:absolute;
+	font-weight: bold;
+	color:#45a29e;
+	top:65px;
+	left:40px;
+}
+#textJob{
+	position:absolute;
+	font-weight: bold;
+	color:#45a29e;
+	top:65px;
+	left:360px;
+}
+#textExp{
+	position:absolute;
+	font-weight: bold;
+	color:#45a29e;
+	top:145px;
+	left:40px;
+}
+
+select option{
+	font-weight: bold;
+}
+#tags{
+    position:absolute;
+    top:250px;
+}
+#tags li{
+	display:inline;
+	padding-right: 20px;
+}
+
+#tags li input[type="text"]{
+	border-radius:25px;
+	padding:7px;
+}
+
+#textCheie{
+	position:absolute;
+	left:40px;
+	top:220px;
+	color:#45a29e;
+	font-weight: bold;
+	padding:0;
+}
+
+#custom-button{
+    position:absolute;
+    top:190px;
+    left:350px;
+    padding: 10px;
+    color:black;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 25px;
+}
+
+#custom-button:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#custom-buttonE{
+    position:absolute;
+    top:190px;
+    left:350px;
+    padding: 10px;
+    color:black;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 25px;
+}
+
+#custom-buttonE:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#custom-text{
+   	position:absolute;
+   	overflow:hidden;
+    left:470px;
+   	top:195px;
+    margin-left:10px;
+    font-family: sans-serif;
+    color:#45a29e;
+}
+
+#logo-companie{
+	position:absolute;
+	left:360px;
+	top:160px;
+	color:#45a29e;
+	font-weight: bold;
+	padding:0;
+}
+
+#descriere{
+	position:absolute;
+	left:40px;
+	top:315px;
+	color:#45a29e;
+	font-weight: bold;
+	padding:0;
+	border:none;
+}
+
+#description{
+	position:absolute;
+	top:340px;
+	left:40px;
+	border-radius: 25px;
+	padding:7px;
+	width:560px;
+}
+
+#butonAdauga{
+	position:absolute;
+	top:400px;
+	left:490px;
+	color:black;
+	background-color:green;
+	border:none;
+}
+
+#butonAdauga:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#butonAdaugaE{
+	position:absolute;
+	top:400px;
+	left:490px;
+	color:black;
+	background-color:orange;
+	border:none;
+}
+
+#butonAdaugaE:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#butonInapoiE{
+	position:absolute;
+	top:400px;
+	left:50px;
+	color:black;
+	background-color:orange;
+	border:none;
+}
+
+#butonInapoiE:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+.container{
+    top:50%;
+    left:50%;
+    width:500px;
+    height:400px;
+    padding-bottom:50px;
+    padding-left:10px;
+    padding-right:10px;
+	transform: translate(-50%,-50%);
+	position:absolute;
+	color:white;
+	background-color:#0b0c10;
+	border-bottom:#45a29e solid 5px;
+	border-top:#45a29e solid 5px;
+	border-left:#45a29e solid 5px;
+	border-right:#45a29e solid 5px;
+	border-radius:25px;
+}
+
+.maiMare{
+    border-bottom:#45a29e solid 3px;
+    padding:7px;
+    padding-bottom:32px;
+}
+.unJob p{
+    display:inline;
+}
+.unJob{
+    padding:7px;
+}
+
+.maiMare input[type="submit"]{
+    display:inline;
+    padding: 5px;
+    color:black;
+    font-weight: bold;
+    background-color: #45a29e;
+    border-radius: 25px;
+    border:none;
+}
+
+#butonEditare{
+    margin-right:10px;
+    right:20px;
+    top:10px;
+    padding-left:2px;
+    padding-right:2px;
+    width:120px;
+    background-color: orange;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+#butonDetaliu{
+    background-color:navy;
+    top:40px;
+    color:white;
+    width:120px;
+    right:20px;
+}
+
+
+#butonStergere{
+    background-color:tomato;
+    top:40px;
+    width:120px;
+    right:80px;
+}
+
+#butonInapoi{
+    float:left;
+    color:black;
+    margin-top:10px;
+    font-weight: bold;
+    background-color: #45a29e;
+    border-radius: 25px;
+    border:none;
+}
+
+#butonInainte{
+    float:right;
+    color:black;
+    margin-top:10px;
+    font-weight: bold;
+    background-color: #45a29e;
+    border-radius: 25px;
+    border:none;
+}
+
+.butoane form{
+    display:block;
+    float:right;
+    position:relative;
+}
+
+.unJob:hover{
+	color: #45a29e;
+	font-weight:bold;
+}
+
+#butonEditare:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#butonStergere:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#butonDetaliu:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#butonInapoi:hover{
+    color:white;
+}
+
+#butonInainte:hover{
+    color:white;
+}
+
+.image-button{
+    background-color: #45a29e;
+    color:#45a29e;
+    border:none;
+}
+
+#experience input[type='text']{
+	position:absolute;
+	left:40px;
+	top:190px;
+	border-radius:25px;
+	padding:7px;
+}
+
+#imagineEdit{
+    height:250px;
+    width:200px;
+    position:absolute;
+    left:90px;
+    top:150px;
+    background-color: #45a29e;
+    border-radius: 25px;
+    border-bottom:#45a29e solid 5px;
+	border-top:#45a29e solid 5px;
+	border-left:#45a29e solid 5px;
+	border-right:#45a29e solid 5px;
+}
+
+#loginWelcome{
+    padding-left:35px;
+}
+
+#loginTextP{
+	padding-left: 17%;
+	padding-top: 10%;
+	color:#45a29e;
+}
+#btnMod{
+    background-color:orange;
+}
+
+#btnMod:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#searchBar{
+    position:absolute;
+    top:14%;
+    left:33%;
+    width:280px;
+    padding:7px;
+    border-radius:25px;
+    border:#45a29e solid 3px;
+    outline:0;
+}
+
+#searchButton{
+    position:absolute;
+    top:14.5%;
+    left:53%;
+}
+
+#searchButton:hover{
+    color:white;
+}
+
+#btnInapoiEd{
+    position:absolute;
+    top:64%;
+    left:42%;
+    background-color:orange;
+}
+
+#btnInapoiEd:hover{
+    color:white;
+    background-color:#45a29e;
+}
+
+#info{
+    padding-top:7px;
+    padding-left:7px;
+}
+
+#info div{
+    font-weight:20px;
+}
+
+#custom-text2{
+   	position:absolute;
+   	overflow:hidden;
+    left:370px;
+   	top:165px;
+    margin-left:10px;
+    font-family: sans-serif;
+    color:#45a29e;
+}
+
+#custom-button2{
+    position:absolute;
+    top:190px;
+    left:350px;
+    padding: 10px;
+    color:black;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 25px;
+}
+
+#custom-button2:hover{
+    background-color: #45a29e;
+    color:white;
+    font-weight:bold;
+}
+
+#flaskwtf{
+    position:absolute;
+    top:12%;
+    left:-84%;
+}
+
+#flaskwtf2{
+    position:absolute;
+    top:12%;
+    left:-94%;
+}

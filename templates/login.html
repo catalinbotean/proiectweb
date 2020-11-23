@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cata's Web Page | Welcome</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+						<li id="paginaCurenta">Home</li>
+						<li><a href="/adauga">Adauga Job</a></li>
+						<li><a href="/afisare/1">Afisare Job-uri</a></li>
+						<li><a href="/administrare/1">Administrare Utilizatori</a></li>
+						<li><a href="/">Deconectare</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+    <section id="continutHome"></section>
+		<div id="inregistrare">
+				<h1><span id="loginText">Welcome!</span></h1>
+				<h3><span id="loginWelcome" style="color:white">Sunteti conectat ca si administrator</span></h3>
+		</div>
+    <footer>
+            <p>Catalin Botean, Copyright &copy; 2020</p>
+		</footer>
+	</body>
+</html>

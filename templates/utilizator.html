@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cata's Web Page | Welcome</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+						<li id="paginaCurenta">Home</li>
+						<li><a href="/editareCont/{{cont.id}}">Editare profil</a></li>
+						<li><a href="/search/{{cont.id}}/1/all">Afisare Job-uri</a></li>
+                        <li><a href="/utilizator/{{cont.id}}/delete">Sterge Contul</a></li>
+						<li><a href="/">Deconectare</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+    <section id="continutHome"></section>
+		<div id="inregistrare">
+			<h1><span id="loginTextP">Welcome <span style="color:white">{{cont.username}}!</span></span></h1>
+		</div>
+    <footer>
+            <p>Catalin Botean, Copyright &copy; 2020</p>
+		</footer>
+	</body>
+</html>

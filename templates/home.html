@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cata's Web Page | Welcome</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+						<li id="paginaCurenta">Home</li>
+						<li><a href="/">Despre Noi</a></li>
+						<li><a href="/">Contact</a></li>
+						<li><a href="/creareCont">Creare Cont</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section id="continutHome"></section>
+
+		<div class="descriere">
+				<h1><p id="blue">Esti in cautarea unui job?</p>
+				                      <p class="white">Atunci ai ajuns in locul potrivit!</p>
+			                          <p class="white">Site-ul meu isi propune sa te ajute</p>
+			                          <p class="white">sa iti gasesti locul de munca ideal.</p></h1>
+			</div>
+
+		<form method="POST" action="/register">
+		<div id="inregistrare">
+				{% with messages = get_flashed_messages() %}
+				{%if messages%}
+					{%for message in messages%}
+						<div id="alerta">{{message}}</div>
+					{%endfor%}
+			     {%endif%}
+				{% endwith%}
+				<h1><span id="loginText">Login</span></h1>
+				<div class="text"><input type="text" name="username" placeholder="Username" /></div>
+				<div class="text"><input type="password"  name="password" placeholder="Password" value=""/></div>
+			<div id="butonEdit"><button class="buton">Login</button></div>
+			<div id="question"><h1>Nu ai cont?<span id="redirectionare"><a href="/creareCont">Click aici!</a></span></h1></div>
+		</div>
+		</form>
+		<footer>
+            <p>Catalin Botean, Copyright &copy; 2020</p>
+		</footer>
+	</body>
+</html>

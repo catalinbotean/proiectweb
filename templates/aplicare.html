@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cata's Web Page | Welcome</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+						<li><a href="/utilizator/{{cont.id}}">Home</a></li>
+						<li><a href="/editareCont/{{cont.id}}">Editare profil</a></li>
+						<li id="paginaCurenta">Afisare Job-uri</li>
+                        <li><a href="/utilizator/{{cont.id}}/delete">Sterge Contul</a></li>
+						<li><a href="/">Deconectare</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section id="continutHome"></section>
+
+		<form method="POST" action="/search/{{cont.id}}/{{page_num}}/{{key}}/cv/{{idJob}}" enctype="multipart/form-data">
+		<div id="inregistrare">
+				<h1><span id="creareText">Aplicare</span></h1>
+				<div class="text"><input type="text" name="username" placeholder="Username" value="{{cont.username}}" /></div>
+				<div class="text"><input type="text"  name="email" placeholder="Email" value="{{cont.email}}"/></div>
+				<div class="text"><input type="text"  name="telefon" placeholder="Telefon" value="{{cont.telefon}}"/></div>
+				<input type="file" id="file" hidden="hidden" name="file" accept="application/pdf"/>
+			<div id="flaskwtf"><button type="button" id="custom-button" style="background-color:orange" >Incarca CV-ul</button></div>
+				<div id="flaskwtf2"><span id="custom-text">No file chosen</span></div>
+				<script>
+					$(function(){
+						$('#file').on('change',function(){
+							var filePath = $(this).val();
+							alert(filePath);
+						});
+					});
+				</script>
+				<script type="text/javascript">
+					const realFileBtn = document.getElementById("file");
+					const customBtn = document.getElementById("custom-button");
+					const customTxt = document.getElementById("custom-text");
+
+					customBtn.addEventListener("click",function(){
+						realFileBtn.click();
+					})
+
+					realFileBtn.addEventListener("change", function(){
+						if(realFileBtn.value){
+							customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+						}
+					})
+				</script>
+			<div id="butonEdit"><button class="buton" type="submit" id="btnMod">Aplica</button></div>
+		</div>
+		</form>
+		<footer>
+            <p>Catalin Botean, Copyright &copy; 2020</p>
+		</footer>
+	</body>
+</html>

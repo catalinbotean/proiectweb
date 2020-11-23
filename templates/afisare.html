@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cata's Web Page | Welcome</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+     <body>
+      <header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+                        <li><a href="/login">Home</a></li>
+						<li><a href="/adauga">Adauga Job</a></li>
+						<li id="paginaCurenta">Afisare Job-uri</li>
+                        <li><a href="/administrare/1">Administrare Utilizatori</a></li>
+						<li><a href="/">Deconectare</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+        <section id="continutHome"></section>
+    <div class="container">
+        {% for job in jobs.items %}
+        <div class="maiMare">
+        <div class="unJob" role="alert">
+            <p><span style="color:#45a29e">Nume companie:</span> {{job.numeCompanie}}</p>
+            <p><span style="color:#45a29e">  Nume job:</span> {{job.numeJob}}</p>
+        </div>
+            <div>{{job.tag1}} | {{job.tag2}} | {{job.tag3}} </div>
+            <div class="butoane">
+                <form method="POST" action="/afisare/{{page_num}}/editare/{{job.id}}">
+                     <input class="buton" type="submit" name="Editare" id="butonEditare" value="Editare"/>
+                </form>
+                <form method="POST" action="/afisare/{{page_num}}/delete/{{job.id}}">
+                     <input class="buton" type="submit" name="Stergere" id="butonStergere" value="Stergere"/>
+                </form>
+        </div>
+        </div>
+        {% endfor %}
+
+        {% if prev_url %}
+        <a href={{prev_url}}> <input class="buton" type="submit" name="Previous" id="butonInapoi" value="Inapoi"/></a>
+        {% endif %}
+        {% if next_url %}
+        <a href={{next_url}}> <input class="buton" type="submit" name="Next" id="butonInainte" value="Inainte"/></a>
+        {% endif %}
+    </div>
+    <footer>
+        <p>Catalin Botean, Copyright &copy; 2020</p>
+    </footer>
+</body>
+</html>

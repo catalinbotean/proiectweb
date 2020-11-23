@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cata's Web Page | Welcome</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+     <body>
+      <header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+                        <li><a href="/login">Home</a></li>
+						<li><a href="/adauga">Adauga Job</a></li>
+                        <li><a href="/afisare/1">Afisare Job-uri</a></li>
+                        <li id="paginaCurenta">Administrare Utilizatori</li>
+						<li><a href="/">Deconectare</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+        <section id="continutHome"></section>
+    <div class="container">
+        {% for profil in cont.items %}
+        <div class="maiMare">
+        <div class="unJob" role="alert">
+            <p><span style="color:#45a29e">Nume utilizator:</span> {{profil.username}}</p>
+        </div>
+            <div class="butoane">
+                <form method="POST" action="/administrare/{{page_num}}/editareContAdmi/{{profil.id}}">
+                     <input class="buton" type="submit" name="Editare" id="butonEditare" value="Editare"/>
+                </form>
+                <form method="POST" action="/administrare/{{page_num}}/deleteContAdm/{{profil.id}}">
+                     <input class="buton" type="submit" name="Stergere" id="butonStergere" value="Stergere"/>
+                </form>
+        </div>
+        </div>
+        {% endfor %}
+
+        {% if prev_url %}
+        <a href={{prev_url}}> <input class="buton" type="submit" name="Previous" id="butonInapoi" value="Inapoi"/></a>
+        {% endif %}
+        {% if next_url %}
+        <a href={{next_url}}> <input class="buton" type="submit" name="Next" id="butonInainte" value="Inainte"/></a>
+        {% endif %}
+    </div>
+    <footer>
+        <p>Catalin Botean, Copyright &copy; 2020</p>
+    </footer>
+</body>
+</html>

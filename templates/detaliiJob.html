@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cata's Web Page | Welcome</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+     <body>
+      <header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+                    <ul>
+					    <li><a href="/utilizator/{{cont.id}}">Home</a></li>
+						<li><a href="/editareCont/{{cont.id}}">Editare profil</a></li>
+						<li id="paginaCurenta">Afisare Job-uri</li>
+                        <li><a href="/utilizator/{{cont.id}}/delete">Sterge Contul</a></li>
+						<li><a href="/">Deconectare</a></li>
+                    </ul>
+				</div>
+			</div>
+		</header>
+
+        <section id="continutHome"></section>
+    <div class="container">
+        <div id="info">
+        <div>Nume companie: {{job.numeCompanie}}</div>
+        <div>Nume job: {{job.numeJob}}</div>
+        <div>Pentru acest job candidatul ideal ar trebui sa aiba cel putin {{job.experienta}} ani de experienta.</div>
+        <div>Candidatul ideal ar trebui sa aiba cunostinte de: {{job.tag1}},{{job.tag2}},{{job.tag3}}</div>
+        <div>Pentru mai multe detalii ne puteti contacta la adresa de email {{job.email}}</div>
+            <form method="POST" action="/search/{{cont.id}}/{{page_num}}/{{key}}/detaliu/{{job.id}}">
+            <div id="butonInapoi"><div class="detaliu"><button class="buton" type="submit" id="btnInapoiEd">Inapoi</button></div></div>
+            </form>
+        </div>
+    </div>
+      <img id="imagineEdit" src="/static/img/uploads/{{job.filename}}">
+    <footer>
+        <p>Catalin Botean, Copyright &copy; 2020</p>
+    </footer>
+</body>
+</html>

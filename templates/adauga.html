@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cata's Web Page | Welcome</title>
+    	<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+						<li><a href="/login">Home</a></li>
+						<li id="paginaCurenta">Adauga Job</li>
+						<li><a href="/afisare/1">Afisare Job-uri</a></li>
+						<li><a href="/administrare/1">Administrare Utilizatori</a></li>
+						<li><a href="/">Deconectare</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+    <section id="continutHome"></section>
+    <div id="adaugare">
+		<form method="POST" action="/insert" enctype="multipart/form-data">
+				<h1><span id="adaugaText">Adauga Job</span></h1>
+				<div id="textCompanie"><p>Nume Companie</p></div>
+				<div id="numeCompanie"><input type="text" name="numeCompanie" placeholder="Nume Companie" value=""/></div>
+				<div id="textJob"><p>Nume Job</p></div>
+				<div id="numeJob"><input type="text"  name="numeJob" placeholder="Nume Job" value=""/></div>
+				<div id="textCheie"><p><span id="txt">Cuvinte Cheie</span></p></div>
+				<div id="textExp"><p>Nivel de experienta</p></div>
+				<div id="experience"><input type="text" name="experienta" placeholder="Experienta minima" value=""/></div>
+				<ul id="tags">
+							 <li><input type="text" name="tag1" placeholder="tag1" value=""/></li>
+							 <li><input type="text" name="tag2" placeholder="tag2" value=""/></li>
+							 <li><input type="text" name="tag3" placeholder="tag3" value=""/></li>
+				</ul>
+				<span id="logo-companie">Logo Companie</span>
+				<input type="file" id="file" hidden="hidden" name="file" accept="image/*"/>
+				<button type="button" id="custom-button">Incarca o poza</button>
+				<span id="custom-text">No file chosen</span>
+				<script>
+					$(function(){
+						$('#file').on('change',function(){
+							var filePath = $(this).val();
+							alert(filePath);
+						});
+					});
+				</script>
+				<script type="text/javascript">
+					const realFileBtn = document.getElementById("file");
+					const customBtn = document.getElementById("custom-button");
+					const customTxt = document.getElementById("custom-text");
+
+					customBtn.addEventListener("click",function(){
+						realFileBtn.click();
+					})
+
+					realFileBtn.addEventListener("change", function(){
+						if(realFileBtn.value){
+							customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+						}
+					})
+				</script>
+				<span id="descriere">Email departament/companie</span>
+				<input type="text" name="description" placeholder="Introduceti adresa de email" id="description"/>
+			<input class="buton" type="submit" name="Adauga" id="butonAdauga" value="Adauga"/>
+		</form>
+		</div>
+    <footer>
+            <p>Catalin Botean, Copyright &copy; 2020</p>
+		</footer>
+	</body>
+</html>

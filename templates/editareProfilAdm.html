@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cata's Web Page | Welcome</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="meniu">
+				<div id="logo">
+					<h1><span id="efect">e</span>Jobs Romania</h1>
+				</div>
+				<div class="optiuni">
+					<ul>
+						<li><a href="/login">Home</a></li>
+						<li><a href="/adauga">Adauga Job</a></li>
+                        <li><a href="/afisare/1">Afisare Job-uri</a></li>
+                        <li id="paginaCurenta">Administrare Utilizatori</li>
+						<li><a href="/">Deconectare</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section id="continutHome"></section>
+
+		<form method="POST" action="/administrare/{{page_num}}/editareContAdm/{{id}}">
+		<div id="inregistrare">
+				<h1><span id="creareText">Editeaza cont</span></h1>
+				<div class="text"><input type="text" name="username" placeholder="Username" value="{{cont.username}}" /></div>
+				<div class="text"><input type="password"  name="password" placeholder="Password" value="{{cont.password}}"/></div>
+				<div class="text"><input type="text"  name="email" placeholder="Email" value="{{cont.email}}"/></div>
+				<div class="text"><input type="text"  name="telefon" placeholder="Telefon" value="{{cont.telefon}}"/></div>
+			<div id="butonEdit"><button class="buton" type="submit" id="btnMod">Modifica</button></div>
+		</div>
+		</form>
+		<form method="POST" action="/administrare/{{page_num}}/inapoi/{{id}}">
+			<div id="butonInapoi"><button class="buton" type="submit" id="btnInapoiEd">Inapoi</button></div>
+		</form>
+		<footer>
+            <p>Catalin Botean, Copyright &copy; 2020</p>
+		</footer>
+	</body>
+</html>
